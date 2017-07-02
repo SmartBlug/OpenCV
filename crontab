@@ -1,0 +1,1 @@
+* * * * * root echo "job done" >> /log.txt
