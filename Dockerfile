@@ -90,8 +90,11 @@ RUN \
     cd ~ && \
     mv python-onvif/ /etc/onvif && \
     mkdir /var/log/cams
-
+RUN mkdir /var/prog
+COPY job /var/prog/job
 COPY crontab /etc/crontab
 RUN chmod 644 /etc/crontab
 RUN touch /log.txt
+CMD ["/bin/bash"]
 CMD ["cron", "-f"]
+

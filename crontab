@@ -1,1 +1,1 @@
-* * * * * root echo "job done" >> /log.txt
+*/2 * * * * root /var/prog/job
